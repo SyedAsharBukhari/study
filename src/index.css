@@ -1,13 +1,95 @@
-body {
+*{
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+}
+body{
+  font-family: sans-serif;
+}
+.brother{
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  text-align: center;
+  background-color: black;
+  color: white;
+  justify-content: space-around;
+}
+a{
+  text-decoration: none;
+  color: white;
+}
+.navbaricon{
+  display: flex;
+  gap: 60px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* nav bar end */
+
+
+
+/* header start */
+.Headerfirst{
+  background-image: url(./assets/images/module.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+  height: 88vh;
+  text-align: center;
+  
 }
+.Headerfirst h1{
+padding: 200px 0px 15px 0px;
+color: black;
+}
+.Headerfirst p{
+  width: 600px;
+  margin: auto;
+  font-size: large;
+}
+.Headerbutton{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 35px;
+gap: 30px;
+}
+.Headerbutton button{
+  height: 40px;
+  width: 100px;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+border: 1px solid black;
+border: none;
+transition-duration: 1s;
+}
+#as{
+background-color: black;
+color: white;
+}
+#as:hover{
+  background-color: white;
+  color: black;
+}
+#asd{
+  background-color: white;
+}
+#asd:hover{
+  background-color: black;
+color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
