@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Dashboard.css';
+import { exit_session } from '../../config/apiHandle/apiHandle';
 
 const Dashboard = () => {
   const [user] = useState({
@@ -34,37 +35,40 @@ const Dashboard = () => {
           <p>Welcome back, {user.name}!</p>
         </div>
         <div className="header-right">
-          <div className="user-profile">
+          {/* <div className="user-profile">
             <div className="avatar">{user.avatar}</div>
             <div className="user-info">
               <span className="user-name">{user.name}</span>
               <span className="user-email">{user.email}</span>
             </div>
-          </div>
+          </div> */}
+          <button onClick={() => exit_session()}>
+            Logout
+          </button>
         </div>
       </header>
 
       {/* Navigation Tabs */}
       <nav className="dashboard-nav">
-        <button 
+        <button
           className={`nav-tab ${activeTab === 'overview' ? 'active' : ''}`}
           onClick={() => setActiveTab('overview')}
         >
           Overview
         </button>
-        <button 
+        <button
           className={`nav-tab ${activeTab === 'analytics' ? 'active' : ''}`}
           onClick={() => setActiveTab('analytics')}
         >
           Analytics
         </button>
-        <button 
+        <button
           className={`nav-tab ${activeTab === 'users' ? 'active' : ''}`}
           onClick={() => setActiveTab('users')}
         >
           Users
         </button>
-        <button 
+        <button
           className={`nav-tab ${activeTab === 'settings' ? 'active' : ''}`}
           onClick={() => setActiveTab('settings')}
         >
@@ -85,7 +89,7 @@ const Dashboard = () => {
                   <p>Total Users</p>
                 </div>
               </div>
-              
+
               <div className="stat-card">
                 <div className="stat-icon revenue-icon">💰</div>
                 <div className="stat-content">
@@ -93,7 +97,7 @@ const Dashboard = () => {
                   <p>Revenue</p>
                 </div>
               </div>
-              
+
               <div className="stat-card">
                 <div className="stat-icon orders-icon">📦</div>
                 <div className="stat-content">
@@ -101,7 +105,7 @@ const Dashboard = () => {
                   <p>Orders</p>
                 </div>
               </div>
-              
+
               <div className="stat-card">
                 <div className="stat-icon products-icon">🛍️</div>
                 <div className="stat-content">
@@ -141,11 +145,11 @@ const Dashboard = () => {
             <div className="analytics-placeholder">
               <p>📊 Analytics charts and graphs will be displayed here</p>
               <div className="chart-placeholder">
-                <div className="chart-bar" style={{height: '60%'}}></div>
-                <div className="chart-bar" style={{height: '80%'}}></div>
-                <div className="chart-bar" style={{height: '40%'}}></div>
-                <div className="chart-bar" style={{height: '90%'}}></div>
-                <div className="chart-bar" style={{height: '70%'}}></div>
+                <div className="chart-bar" style={{ height: '60%' }}></div>
+                <div className="chart-bar" style={{ height: '80%' }}></div>
+                <div className="chart-bar" style={{ height: '40%' }}></div>
+                <div className="chart-bar" style={{ height: '90%' }}></div>
+                <div className="chart-bar" style={{ height: '70%' }}></div>
               </div>
             </div>
           </div>

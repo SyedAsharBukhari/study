@@ -3,19 +3,16 @@ import Home from './pages/Home'
 import Login from './screens/login/Login'
 import Signup from './screens/signup/Signup';
 import Dashboard from './screens/dashboard/Dashboard';
+import RouterApp from './config/RouterApp/Router';
+import { Provider } from 'react-redux';
+import store from './store/store';
 
 
 function App() {
   return (
-<BrowserRouter>
-<Routes>
-  <Route path="/login" element={<Login/>}/>
-  <Route path="/signup" element={<Signup/>}/>
-  <Route path="/" element={<Home/>}/>
-  <Route path="/dashboard" element={<Dashboard/>}/>
-</Routes>
-
-</BrowserRouter>
+    <Provider store={store}>
+      <RouterApp />
+    </Provider>
   );
 }
 
